@@ -1,0 +1,163 @@
+/* pages/info/info.wxss */
+.school-library {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.school-library .school-img {
+  flex: 1
+}
+.school-library image {
+  width: 100%
+}
+.school-library .school-view {
+  flex: 3;
+  margin-left: 20rpx;
+}
+.school-library .school-view .title {
+  color: #181818;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.school-library .school-view .tip {
+  font-size: 24rpx;
+  padding: 4rpx 12rpx;
+  margin-top: 20rpx;
+  border:1rpx solid #f9a562;
+  color: #f9a562;
+  display: inline-block;
+}
+.school-library .school-view .tag-box {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+.school-library .school-view .date {
+  font-size: 24rpx;
+  color: #a5a5a5;
+  margin-top: 30rpx;
+}
+.school-library .school-view .date image {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: text-top;
+}
+.school-library .school-view .tag-school {
+  padding: 4rpx 20rpx;
+  margin-right: 20rpx;
+  color: #fff;
+  border-radius: 6rpx;
+}
+.school-library .school-view .tag-school.icon0 {
+  background: #ff6d2d;
+}
+.school-library .school-view .tag-school.icon1 {
+  background: #ffa65f;
+}
+.school-library .school-view .tag-school.icon2 {
+  background: #96c9ff;
+}
+
+.school-piclist {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.school-piclist scroll-view {
+  white-space: nowrap; 
+  display: flex; 
+}
+.school-piclist scroll-view view {
+  width: 100px; 
+  height: auto;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.school-piclist scroll-view view:last-child {
+  margin: 0;
+}
+.school-piclist scroll-view view image {
+  width: 100%
+}
+.school-icon {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: text-top;
+  margin-right: 16rpx;
+}
+.school-wrapper {
+  font-size: 30rpx;
+  color: #585858;
+}
+.school-address {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.school-area {
+  padding: 20rpx;
+  color: #585858;
+  font-size: 28rpx;
+}
+.school-synopsis,.school-signup,.school-recruit,.school-integral {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  position:relative;
+}
+.school-synopsis:after {
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  margin-top: 32rpx;
+  content: "";
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  transform: rotate(-45deg);
+}
+.school-integral .time {
+  font-size: 24rpx;
+  color: #999;
+}
+.school-teacher {
+  display: flex;
+  padding: 40rpx 30rpx;
+}
+.school-teacher view {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-size: 28rpx;
+}
+.school-teacher view:last-child {
+  border:none;
+}
+.school-teacher view text {
+  display: block;
+}
+.school-teacher view text:first-child {
+  color: #fda862;
+  font-weight: bold;
+}
+.school-button {
+  display: inline-block;
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  font-size: 28rpx;
+  color: #fff;
+}
+.school-recruit-button {
+  background: #ffa85e;
+}
+.school-signup-button {
+  background: #22bc99;
+}
+.school-integral-button {
+  background: #8fbeff;
+}.hr-line {
+  height: 10rpx;
+  background: #f1f1f1;
+}
+.school-map {
+  margin: 20rpx 0;
+}

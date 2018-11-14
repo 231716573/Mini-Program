@@ -1,0 +1,31 @@
+<!--pages/guanyin/guanyin.wxml-->
+<view class="guanyin-title">
+  <image src="/assets/guanyin.jpg" mode="widthFix" />
+</view>
+
+<view class="guanyin-sign">
+  <image src="{{guanyinSign}}" mode="widthFix" />
+</view>
+
+<view class="guanyin-zhibei">
+  <view wx:if="{{isShare}}"><button open-type="share" class="share" style='width: 100%;height: 100%;color:#1aad16;'>点击此处转发可查看签文</button></view>
+  <image wx:if="{{zhibeiTime<3}}" src="{{guanyinZhibei}}" mode="widthFix" bindtap='startSign' />  
+  <image wx:else src="/assets/zhibei_04.png" mode="widthFix" bindtap='seeSign'></image>
+</view>
+
+<view class="guanyin-tip">提示：连续三次左右摇一摇手机，直到弹出<span>“摇签成功”</span>，再进行下一步操作</view>
+<view class="guanyin-gif"><image src="/assets/phone_tip.gif" mode="widthFix"></image></view>
+
+<view class="guanyin-jie" style='top: {{hideGuanyinTop}}%'>
+  <view class="guanyin-wrapper">
+    <view class="title">观音灵签</view>
+    <view class="desc"><span>第{{name}}</span> {{title}}</view>
+    <view class="desc"><i>宫位：</i><span>{{gongwei}}</span> {{shangxia}}</view>
+    <view class="desc"><i>诗曰：</i>{{shiyue}}</view>
+    <view class="desc"><i>签语：</i>{{shiyi}}</view>
+    <view class="desc"><i>解签：</i>{{jieyue}}</view>
+    <view class="desc"><i>仙机：</i>{{xianji}}</view>
+    <view class="desc"><i>故事：</i>{{gushi}}</view>
+    <view class="hide-guanyin" bindtap='hideGuanyin'><image src='/assets/zhibei_hide.png' mode="widthFix" /></view>
+  </view>
+</view>

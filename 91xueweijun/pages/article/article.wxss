@@ -1,0 +1,92 @@
+/* pages/article/article.wxss */
+.article-content,.article-recommend {
+  margin:0 20rpx;
+}
+.article-head {
+  padding-top: 20rpx;
+}
+.article-head .title {
+  font-weight: bold;
+}
+.article-head .desc {
+  font-size: 28rpx; 
+  margin-top: 20rpx;
+} 
+.article-head .desc .author {
+  font-weight: bold;
+  margin-right: 20rpx;
+  color: #1a1a1a;
+}
+.article-head .desc .time {
+  color: #888;
+}
+.article-body {
+  margin: 40rpx 0;
+  line-height: 1.6;
+  font-size: 32rpx;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+.article-tag-type {
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-bottom: 16rpx;
+  font-size: 26rpx;
+  color: #595a5c;
+  background: #f4f5f7;
+  padding: 8rpx 20rpx;
+  border-radius: 6rpx;
+  border: 1px solid hsla(0,0%,87%,.4);
+}
+.hr-line {
+  width: 100%;
+  height: 20rpx;
+  background: #f1f1f1;
+}
+.article-tag {
+  margin-bottom: 20rpx;
+}
+.article-recommend {
+  margin-top: 20rpx;
+}
+.article-recommend .title {
+  font-size: 28rpx;
+  color: rgb(163, 163, 163);
+}
+.article-recommend-list {
+  position: relative;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+}
+.article-recommend-list .image {
+  flex: 1
+}
+.article-recommend-list .image image {
+  width: 100%
+}
+.article-recommend-list .view {
+  flex: 2;
+  margin-left: 20rpx;
+}
+.article-recommend-list .title {
+  font-size: 34rpx;
+  color: #333;
+}
+.article-recommend-list .desc {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color:#a5a5a5;
+}
+.article-recommend-list .desc .pv {
+  display: inline-block;
+  float: right;
+}
+.article-recommend-list .desc .pv image {
+  width: 24rpx;
+  vertical-align: middle;
+}
+.article-recommend-list .desc text {
+  margin-right: 20rpx;
+}

@@ -1,0 +1,108 @@
+<!--pages/info/info.wxml-->
+<view class="school-library">
+  <view class="school-img">
+    <image src='{{school.badge}}' mode="widthFix" />
+  </view>
+  <view class="school-view">
+    <view class="title">{{school.name}}</view>    
+    <view class="tag-box">
+      <text class="tag-school icon0" wx:if="{{school.grade == 1}}">区一级</text>
+      <text class="tag-school icon0" wx:elif="{{school.grade == 2}}">市一级</text>
+      <text class="tag-school icon0" wx:elif="{{school.grade == 3}}">省一级</text>
+
+      <text class="tag-school icon1" wx:if="{{school.category == 1}}">公办</text>
+      <text class="tag-school icon1" wx:elif="{{school.category == 2}}">民办</text>
+
+      <text class="tag-school icon2" wx:if="{{school.section == 1}}">小学</text>
+      <text class="tag-school icon2" wx:elif="{{school.category == 7}}">初中</text>
+    </view>
+    <view class="date"><image src="/assets/school/icon_history.png" /> 创办于 {{school.school_year}}年</view>
+  </view>
+</view>
+
+<view class="school-piclist">
+  <scroll-view scroll-x="true">
+    <view wx:if="{{item.img != ''}}" wx:for="{{picList}}" wx:key="*this">
+      <image src='{{item.img}}' mode="widthFix"/>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="school-wrapper">
+  <view class="school-address">
+    <image class="school-icon" src='/assets/school/icon_location.png'/><text>{{school.address}}</text>
+  </view>
+  <view class="school-synopsis">
+    <image class="school-icon" src='/assets/school/icon_synopsis.png'/><text>学校简介</text>
+  </view>
+  <view class="school-recruit">
+    <image class="school-icon" src='/assets/school/icon_recruit.png'/><text>招生简章</text>
+    <button class="school-recruit-button school-button">立即查看</button>
+  </view>
+  <view class="school-signup">
+    <image class="school-icon" src='/assets/school/icon_signup.png'/><text>模拟报名</text>
+    <button class="school-signup-button school-button">立即使用</button>
+  </view>
+  <view class="school-integral">
+    <image class="school-icon" src='/assets/school/middle_icon_integral.png'/>
+    <text>入学积分<text class="time">(2017)</text> {{school.school_jf.xwlb}} {{school.school_jf.jf}}分</text>
+    <button class="school-integral-button school-button">积分估算</button>
+  </view>
+  <view class="school-address">
+    <image class="school-icon" src='/assets/school/middle_icon_range@2x.png'/><text>招生范围</text>
+  </view>
+  <view class='school-area'>
+    <!-- <view>{{location.getLoc(school.location)}}, {{location.getLat(school.location)}}</view> -->
+    <view class="school-area-detail">{{school.recruit_range}}</view>
+    <view class="school-map">
+      <!-- map.wxml -->
+      <map  id="map" 
+            longitude="{{location.getLoc(school.location)}}" 
+            latitude="{{location.getLat(school.location)}}" 
+            scale="14" controls="{{controls}}" 
+            bindcontroltap="controltap" 
+            markers="{{markers}}" 
+            bindmarkertap="markertap" 
+            polyline="{{polyline}}" 
+            bindregionchange="regionchange" 
+            show-location style="width: 100%;"></map>
+    </view>
+  </view>
+  <view class="hr-line"></view>
+  <view class="school-address">
+    <image class="school-icon" src='/assets/school/middle_icon_teachers@2x.png'/>
+    <text>师生力量</text>
+  </view>
+  <view class="school-teacher">
+    <view>
+      <text>{{school.teacher_percent}}</text>
+      <text>师生比例</text>
+    </view>
+    <view>
+      <text>{{school.total}}</text>
+      <text>在校人数</text>
+    </view>
+    <view>
+      <text>{{school.classes}}</text>
+      <text>班级总数</text>
+    </view>
+  </view>
+</view>
+
+<wxs module="location">
+var getLoc = function(loc) {
+  if (!loc) return
+  var address = loc.split(',')
+
+  return address[0]
+}
+var getLat = function(loc) {
+  if (!loc) return
+  var address = loc.split(',')
+
+  return address[1]
+}
+
+module.exports.getLoc = getLoc
+module.exports.getLat = getLat
+</wxs>

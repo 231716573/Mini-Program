@@ -1,0 +1,39 @@
+<!--pages/me/me.wxml-->
+<view class="personal-head">
+  <image class="personal-bg" src='/assets/bg_mine@2x.png' mode='widthFix' />
+  <view class="personal-view">
+    <view class="personal-awatar">
+      <view class="personal-circle1"></view>
+      <view class="personal-circle2"></view>
+      <image src='{{person.headimgurl ? person.headimgurl : "/assets/avatar_default.png"}}' class="personal-awatar-bg" mode='widthFix' />
+      <view class="personal-name" style='text-align:center;'>{{person.list[0].children_name}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="personal-list">
+  <view class="personal-item">
+    <image src='/assets/icon_information@2x.png' mode='widthFix' />
+    <text>我的信息</text>
+  </view>
+  <view class="personal-item">
+    <image src='/assets/icon_collect@2x.png' mode='widthFix' />
+    <text>我的收藏</text>
+  </view>
+  <view class="personal-item">
+    <image src='/assets/icon_comment@2x.png' mode='widthFix' />
+    <text>我的评论</text>
+  </view>
+  <view class="personal-item">
+    <image src='/assets/icon_feedback@2x.png' mode='widthFix' />
+    <text>我的反馈</text>
+  </view>
+  <view class="personal-item">
+    <image src='/assets/icon_service@2x.png' mode='widthFix' />
+    <text>我的服务</text>
+  </view>
+  <view class="personal-item">
+    <image src='/assets/icon_setup@2x.png' mode='widthFix' />
+    <text>设置</text>
+  </view>
+</view>

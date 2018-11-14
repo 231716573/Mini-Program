@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/tools/tools",
+    "pages/school/school",
+    "pages/activity/activity",
+    "pages/me/me",
+    "pages/article/article",
+    "pages/info/info"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#f0f0f0",
+    "navigationBarBackgroundColor": "#22bc99",
+    "navigationBarTitleText": "91学位君",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#4e4e4e",
+    "selectedColor": "#22bc99",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "头条",
+        "iconPath": "/assets/icons/tab1.png",
+        "selectedIconPath": "/assets/icons/tab1_s.png"
+      }, {
+        "pagePath": "pages/tools/tools",
+        "text": "工具",
+        "iconPath": "/assets/icons/tab2.png",
+        "selectedIconPath": "/assets/icons/tab2_s.png"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "text": "查学校",
+        "iconPath": "/assets/icons/tab3.png",
+        "selectedIconPath": "/assets/icons/tab3_s.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "/assets/icons/tab4.png",
+        "selectedIconPath": "/assets/icons/tab4_s.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/assets/icons/tab5.png",
+        "selectedIconPath": "/assets/icons/tab5_s.png"
+      }
+    ]
+  }
+}

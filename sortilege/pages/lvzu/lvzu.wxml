@@ -1,0 +1,54 @@
+<!--pages/guanyin/guanyin.wxml-->
+
+<view class="guanyin-title">
+  吕祖灵签总共有一百支，吕祖灵签每支签都有其特殊的意义。吕祖灵签，最玄之处是签文不会有详细解释，一切都要自行会意，要靠个人的慧根去参透当中的玄机。
+  <image src="/assets/lvzu.jpg" mode="widthFix" />
+</view>
+
+<!-- <view class="guanyin-sign">
+  <image src="{{guanyinSign}}" mode="widthFix" />
+</view> -->
+
+<view class="guanyin-zhibei">
+  <view wx:if="{{isShare}}"><button open-type="share" class="share" style='width: 100%;height: 100%;color:#1aad16;'>点击此处转发后开始抽签</button></view> 
+  <image src="/assets/qiuqian.gif" mode="widthFix" bindtap='showZhibei' />
+
+</view>
+
+<view class="guanyin-tip">抽灵签前要专心一致，秉除杂念，先双手合手默念，吕祖仙师，指点迷经。然后默念自己姓名，出生年月日和居住地址。接着请求指点的问题，如婚姻、事业、流年、财运等等。</view>
+<view class="guanyin-tip">接着心里默想从一到一百其中的一个数字，然后掷杯，连续三个圣杯可得此灵签，如没有杯可执可使用两个一元硬币代替。切忌，一样的问题不可重复询问，否则签会不准的。</view>
+
+<!-- 掷杯 -->
+<view wx:if="{{showZhibei}}" class="guanyin-three">
+  <view class="title">您已经抽到签！请心中虔诚默念！<span>请求指点的问题！再进行下一步！</span></view>
+  <view class="shengbei">
+    <image src="{{beiGif}}" mode="widthFix" class="sign" />
+
+    <view wx:if="{{zhibeiBool}}" class="desc" style='color: red;'>您掷出了笑杯，该签不灵，请重新抽签。</view>
+    <view wx:else class="desc">需连续掷出三次圣杯后，此签才算是灵签！</view>
+
+    <block wx:if="{{!showQianci}}">
+      <image wx:if="{{!zhibeiBool}}" src="{{zhibeiGif}}" mode="widthFix" class="zhibeiSign" bindtap='zhibeiGif' />
+      <image wx:else src="/assets/zhibei5.gif" mode="widthFix" class="zhibeiSign" bindtap='zhibeiFlase' />
+    </block>
+    <block wx:else>
+      <image src="/assets/zhibei4.gif" mode="widthFix" class="zhibeiSign" bindtap='showQianci' />
+    </block>
+  </view>
+</view>
+
+<!-- 签词 -->
+<view class="guanyin-jie" style='top: {{hideGuanyinTop}}%'>
+  <view class="guanyin-wrapper">
+    <view class="title">{{guanyin.title}}</view>
+    <view class="desc"><i>吕祖灵签-签文：</i>{{guanyin.qianwen}}</view>
+    <view class="desc"><i>吕祖灵签-解签：</i>{{guanyin.jieyue}}</view>
+    <view class="desc"><i>吕祖灵签-诗曰：</i>{{guanyin.shiyue}}</view>
+    <view class="image">
+      <image wx:if="{{guanyin.id}}" src="https://git.play800.cn/static/images/lvzu/{{guanyin.id}}.gif" mode="widthFix" />
+    </view>
+    <view class="desc">{{guanyin.yuncheng}}</view>
+    <view class="desc"><i>典故：</i>{{guanyin.gaishu}}</view>
+    <view class="hide-guanyin" bindtap='hideGuanyin'><image src='/assets/zhibei_hide.png' mode="widthFix" /></view>
+  </view>
+</view>

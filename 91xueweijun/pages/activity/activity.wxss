@@ -1,0 +1,11 @@
+/* pages/activity/activity.wxss */
+.activity-view {
+  margin: 40rpx;
+}
+.activity-view image {
+  width: 100%
+}
+.hr-line {
+  height: 10rpx;
+  background: #f1f1f1;
+}

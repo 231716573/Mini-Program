@@ -1,0 +1,20 @@
+<!--pages/template/template.wxml-->
+<template name="sm">
+  <view class="sm-wrapper">
+    <view class="sm-bg"></view>
+    <view class="sm-view">
+      <view wx:if="{{data != 0}}" class="sm-nav {{data == 0 ? 'active' : ''}}">第一章 生辰</view>
+      <view wx:else class="sm-nav active">第一章 生辰</view>
+      <view wx:if="{{data != 1}}" class="sm-nav {{data == 1 ? 'active' : ''}}">第二章 八字</view>
+      <view wx:else class="sm-nav active">第二章 八字</view>
+      <view wx:if="{{data != 2}}" class="sm-nav {{data == 2 ? 'active' : ''}}">第三章 姓名</view>
+      <view wx:else class="sm-nav active">第三章 姓名</view>
+      <view wx:if="{{data != 3}}" class="sm-nav {{data == 3 ? 'active' : ''}}">第四章 日干</view>
+      <view wx:else class="sm-nav active">第四章 日干</view>
+      <view wx:if="{{data != 4}}" class="sm-nav {{data == 4 ? 'active' : ''}}">第五章 称骨</view>
+      <view wx:else class="sm-nav active">第五章 称骨</view>
+      <view wx:if="{{data != 5}}" class="sm-nav {{data == 5 ? 'active' : ''}}">第六章 姻缘</view>
+      <view wx:else class="sm-nav active">第六章 姻缘</view>
+    </view>
+  </view>
+</template> 

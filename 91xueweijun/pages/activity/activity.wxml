@@ -1,0 +1,7 @@
+<!--pages/activity/activity.wxml-->
+<view class="activity">
+  <view class="activity-view">
+    <image src="/assets/activity4.png" mode='widthFix' />
+  </view>
+  <view class="hr-line"></view>
+</view>

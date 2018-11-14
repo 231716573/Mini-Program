@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/kechien/kechien",
+    "pages/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#f0f0f0",
+    "navigationBarTitleText": "算命小程序",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "八字",
+        "iconPath": "/assets/icon/suanming-1.png",
+        "selectedIconPath": "/assets/icon/suanming.png"
+      }, {
+        "pagePath": "pages/kechien/kechien",
+        "text": "结缘(暂无)",
+        "iconPath": "/assets/icon/jieyuan-1.png",
+        "selectedIconPath": "/assets/icon/jieyuan.png"
+      }, {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/assets/icon/account-1.png",
+        "selectedIconPath": "/assets/icon/account.png"
+      }
+    ]
+  }
+}

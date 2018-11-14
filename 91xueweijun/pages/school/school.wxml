@@ -1,0 +1,41 @@
+<!--pages/school/school.wxml-->
+<view class="school-bar">
+  <view class="school-bar-type">
+    <view class="{{itemType == 'category' ? 'active': ''}}" bindtap="selectType" data-school-type="0">办学类型</view>
+    <view class="{{itemType == 'section' ? 'active': ''}}" bindtap="selectType" data-school-type="1">学段</view>
+    <view class="{{itemType == 'grade' ? 'active': ''}}" bindtap="selectType" data-school-type="2">办学等级</view>
+  </view>
+  <view class="school-bar-con" wx:if="{{itemType != ''}}">
+    <view class="{{item.active == 1 ? 'active' : ''}}"
+          wx:for="{{schoolType}}" wx:key="id"
+          bindtap='selectSchoolType'
+          data-item-sort="{{item.sort}}" data-item-id="{{item.id}}">
+      <icon wx:if="{{item.active == 1}}" type="success_no_circle" size="16" />
+      {{item.name}}
+    </view>
+  </view>
+  <view bindtap="hideShcoolBarBg" wx:if="{{schoolBar}}" class="school-bar-bg"></view>
+</view>
+
+<view class="school-library">
+  <navigator url="../info/info?id={{item.school_uid}}" class="school-list" wx:for="{{schoolList}}" wx:key="*this">
+    <view class="school-img">
+      <image src='{{item.badge}}' mode="widthFix" />
+    </view>
+    <view class="school-view">
+      <view class="title">{{item.school_name}}</view>    
+      <view class="tip" wx:if="{{item.school_jf == 1}}">入学积分</view>
+      <view class="tag-box">
+        <text class="tag-item icon0" wx:if="{{item.grade == 1}}">区一级</text>
+        <text class="tag-item icon0" wx:elif="{{item.grade == 2}}">市一级</text>
+        <text class="tag-item icon0" wx:elif="{{item.grade == 3}}">省一级</text>
+
+        <text class="tag-item icon1" wx:if="{{item.category == 1}}">公办</text>
+        <text class="tag-item icon1" wx:elif="{{item.category == 2}}">民办</text>
+
+        <text class="tag-item icon2" wx:if="{{item.section == 1}}">小学</text>
+        <text class="tag-item icon2" wx:elif="{{item.category == 7}}">初中</text>
+      </view>
+    </view>
+  </navigator>
+</view>

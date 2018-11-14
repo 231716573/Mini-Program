@@ -1,0 +1,34 @@
+<!--pages/article/article.wxml-->
+<view class='article-container'>
+  <view class="article-content">
+    <view class="article-head">
+      <view class="title">{{article.title}}</view>
+      <view class="desc">
+        <text class="author">{{article.author}}</text>
+        <text class="time">{{article.post_date_show}}</text>
+      </view>
+    </view>
+    <view class="article-body">{{article.title}}</view>
+    <view class="article-tag">
+      <text class="article-tag-type" wx:for="{{article.tags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+  <view class="hr-line"></view>
+  <view class="article-recommend">
+    <view class="title">其他人还在看</view>
+    <navigator url='article?artId={{item.id}}' class="article-recommend-list" wx:for="{{article.related}}" wx:key="id">
+      <view class="image">
+        <image src='http://www.7wanl.com/data/attachment/portal/201803/01/165059lwpnpzmzlhpqqucr.jpg.max.jpg' mode="widthFix"/>
+      </view>
+      <view class="view">
+        <view class="title">{{item.title}}</view>
+        <view class="desc">
+          <view class="pv"><image src='/assets/tab_quantity@2x.png'  mode="widthFix"/> {{item.pv}}</view>
+          <text class="author">{{item.post_source}}</text>
+          <text class="time">{{item.post_date_show}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="hr-line"></view>
+</view>

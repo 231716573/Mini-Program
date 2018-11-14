@@ -1,0 +1,71 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx736e19e34a352fcc",
+	"projectname": "sortilege",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "观音求签",
+					"pathName": "pages/guanyin/guanyin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "生辰篇",
+					"pathName": "pages/sm1/sm1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "吕祖求签",
+					"pathName": "pages/lvzu/lvzu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "黄大仙灵签",
+					"pathName": "pages/daxian/daxian",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关帝",
+					"pathName": "pages/guandi/guandi",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "诸葛",
+					"pathName": "pages/zhuge/zhuge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "八字测算",
+					"pathName": "pages/sm1/sm1",
+					"query": ""
+				}
+			]
+		}
+	}
+}

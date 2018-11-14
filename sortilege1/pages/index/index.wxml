@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<swiper class="slides" 
+        circular="true" interval="3000"
+        autoplay='{{slides.length > 1}}' 
+        indicator-dots="{{slides.length > 1}}" 
+        indicator-color="#bcc0c9" indicator-active-color="#3a4861">
+  <swiper-item wx:for="{{slides}}" wx:key="id">
+    <navigator wx:if="{{item.link}}" url="{{item.link}}">
+      <image src='{{item.img}}' mode="aspectFill" />
+    </navigator>
+    <image wx:else src=" {{item.img}} " mode="aspectFill" />
+  </swiper-item>
+</swiper>
+
+<view class="fortune">
+  <view class="fortune-image">
+    <image src='/assets/zg.gif' mode="widthFix" />
+  </view>
+  <view class="fortune-content">
+    <view class="name">
+      姓<input />名<input />性别:
+      <picker bindchange="bindPickerChange" class="picker" value="{{sexIndex}}" range="{{sex}}">{{sex[sexIndex]}}</picker>
+    </view>
+    <view class="date">
+      生辰: 
+      <picker mode="date" fields="day" class="picker picker1" value="{{dateYear}}" bindchange="bindYearChange">{{dateYear}}</picker>
+      <picker bindchange="bindhhChange" class="picker picker2" value="{{sexIndex}}" range="{{hh}}">{{hh[hhIndex]}}</picker>点
+    </view>
+    <view class="calculate">八字测算</view>
+  </view>
+</view>
+
+<view class="pray">
+  <view class="title">求签</view>
+  <view class="pray-view" wx:for="{{prays}}" wx:key="id">
+    <view class="pray-image">
+      <image src='{{item.img}}' mode="widthFix" />
+    </view>
+    <view class="pray-content">{{item.title}}</view>
+  </view>
+  <view class="clear"></view>
+</view>
+
+<view class="zgml">
+  <image src="/assets/zgml.jpg" mode="widthFix" />
+</view>

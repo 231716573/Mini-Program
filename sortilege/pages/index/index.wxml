@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<swiper class="slides" 
+        circular="true" interval="3000"
+        autoplay='{{slides.length > 1}}' 
+        indicator-dots="{{slides.length > 1}}" 
+        indicator-color="#bcc0c9" indicator-active-color="#3a4861">
+  <swiper-item wx:for="{{slides}}" wx:key="*this">
+    <image src="{{item}}"  data-src="{{item}}" mode="aspectFill" bindtap="previewImage"/>
+  </swiper-item>
+</swiper>
+
+<view class="fortune">
+  <view class="fortune-image">
+    <image src='/assets/zg.gif' mode="widthFix" />
+  </view>
+  <view class="fortune-content">
+    <view class="name">
+      姓:<input bindblur="bindXingChange" />名:<input bindblur="bindMingChange" />
+    </view>
+    <view class="name">
+      性别: <picker bindchange="bindPickerChange" class="picker picker-sex" value="{{sexIndex}}" range="{{sex}}">{{sex[sexIndex]}}</picker>
+      血型: <picker bindchange="bindXueChange" class="picker" value="{{xueIndex}}" range="{{xue}}">{{xue[xueIndex]}}</picker>型
+    </view>
+    <view class="date">
+      生辰: 
+      <picker mode="date" fields="day" class="picker picker1" value="{{dateYear}}" bindchange="bindYearChange">{{dateYear}}</picker>
+      <picker bindchange="bindhhChange" class="picker picker2" value="{{hhIndex}}" range="{{hh}}">{{hh[hhIndex]}}</picker>点
+    </view>
+    <button class="calculate" disabled="{{calculateButton}}" bindtap='calculate'>生辰八字测算</button>
+  </view>
+</view>
+
+<view class="pray">
+  <view class="title">求签</view>
+  <navigator url="{{item.link}}" class="pray-view" wx:for="{{prays}}" wx:key="id">
+    <view class="pray-image">
+      <image src='{{item.img}}' mode="widthFix" />
+    </view>
+    <view class="pray-content">{{item.title}}</view>
+  </navigator>
+  <view class="clear"></view>
+</view>
+
+<view class="zgml">
+  <image src="/assets/suanming.jpg" mode="widthFix" />
+</view>

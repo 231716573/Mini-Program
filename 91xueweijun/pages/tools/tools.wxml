@@ -1,0 +1,22 @@
+<!--pages/tools/tools.wxml-->
+<view class="tools-image">
+  <image src="/assets/bg_img@2x.png" />
+</view>
+
+<view class="tools-list">
+  <block wx:for="{{tools}}" wx:key="id">
+    <view class="tools-view" >
+      <view class="tools-img">
+        <image src="{{item.image}}" mode="widthFix"></image>
+      </view>
+      <view class="tools-content">
+        <view class="title">
+          <text>{{item.title}}</text>
+          <text class="star">{{item.star}}</text>
+        </view>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+    </view>
+    <view class="hr-line"></view>
+  </block>
+</view>

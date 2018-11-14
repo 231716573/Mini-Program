@@ -1,0 +1,27 @@
+<scroll-view scroll-x class="scroll-view_H">
+  <view wx:for="{{categories}}" wx:key="cat_id"
+        class="{{cateId == item.cat_id ? 'active' : ''}}"
+        bindtap="cateActive"
+        data-cate-id="{{item.cat_id}}">{{item.cat_name}}</view>
+</scroll-view>
+
+<view class="container">
+  <view class="container-ul">
+    <navigator url="../article/article?artId={{item.id}}" class="acticle-section" wx:for="{{articles}}" wx:key="id">
+      <view class="acticle-img">
+        <image src='http://www.7wanl.com/data/attachment/portal/201803/05/093829uqjqwzj30p0w9jpz.jpg.max.jpg' mode="widthFix" />
+      </view>
+      <view class="acticle-content">
+        <view class="title">{{item.title}}</view>
+        <view class="desc">
+          <text>{{item.post_source}}</text>
+          <text>{{item.post_date_show}}</text>
+          <view><image src='/assets/tab_quantity@2x.png' mode="widthFix" />{{item.pv}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view wx:if="{{hasMore}}" class="loadmore loading">正在加载中...</view>
+<view wx:else class="loadmore">没有更多内容了</view>

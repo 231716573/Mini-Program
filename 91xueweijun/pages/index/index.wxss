@@ -1,0 +1,72 @@
+/**index.wxss**/
+.scroll-view_H {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  background: #fff;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.scroll-view_H view {
+  display: inline-block;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  color: #585858;
+  font-size: 28rpx;
+}
+.scroll-view_H view.active { color: #22bc99; }
+
+.container {
+  padding-top: 74rpx
+}
+.acticle-section { 
+  padding: 30rpx;
+  border-bottom: 1rpx solid hsla(0,0%,87%,.6);
+  display: flex;
+}
+.acticle-section .acticle-img {
+  flex:1
+}
+.acticle-section .acticle-img image {
+  width: 100%;
+  max-height: 200rpx;
+}
+.acticle-section .acticle-content {
+  flex:2;
+  margin-left: 20rpx;
+}
+.acticle-section .acticle-content .title {
+  font-size: 32rpx;
+  color: #181818;
+}
+.acticle-section .acticle-content .desc {
+  font-size: 24rpx;
+  color:#a5a5a5;
+  margin-top: 16rpx;
+}
+.acticle-section .acticle-content .desc view {
+  display: inline-block;
+}
+.acticle-section .acticle-content .desc view image {
+  width: 24rpx;
+  vertical-align: middle;
+}
+.acticle-section .acticle-content .desc text {
+  margin-right: 14rpx;
+}
+.loadmore {
+  font-size: 30rpx;
+  text-align: center;
+  color: #666;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+
+.navigator-hover {
+    color:red;
+}

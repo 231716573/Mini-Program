@@ -1,0 +1,48 @@
+/* pages/tools/tools.wxss */
+
+.tools-image {
+  width: 100%; 
+  background: url('http://www.moepan.net/uploads/201803714342871596964.png') center center no-repeat;
+  height: 600rpx;
+  position: relative;
+}
+.tools-image image {
+  width: 430rpx;
+  height: 430rpx;
+  position: absolute;
+  left: 50%;
+  top: 50rpx;
+  margin-left: -215rpx;
+}
+.tools-view {
+  margin: 24rpx 0;
+  display: flex;
+}
+.tools-view .tools-img {
+  flex:1;
+  margin: 0 24rpx;
+}
+.tools-view .tools-img image {
+  width: 100%
+}
+.tools-view .tools-content {
+  flex: 4;
+}
+.tools-view .title {
+  font-size: 36rpx;
+  color: #181818;
+  margin: 0 0 16rpx;
+  padding-top: 16rpx;
+}
+.tools-view .star {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+.tools-view .desc {
+  font-size: 30rpx;
+  color: #585858;
+}
+.hr-line {
+  background: #f1f1f1;
+  height: 10rpx;
+}

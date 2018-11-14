@@ -1,0 +1,65 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx736e19e34a352fcc",
+	"projectname": "91xueweijun",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "工具页面",
+					"pathName": "pages/tools/tools",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "活动页面",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "学校页面",
+					"pathName": "pages/school/school",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "文章页",
+					"pathName": "pages/article/article",
+					"query": "artId=9591"
+				},
+				{
+					"id": -1,
+					"name": "学校详情",
+					"pathName": "pages/info/info",
+					"query": "id=d6f3dc8c9cea11e7b9304ccc6af6fb5f"
+				}
+			]
+		}
+	}
+}

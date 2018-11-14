@@ -1,0 +1,147 @@
+/* pages/guanyin/guanyin.wxss */
+.share::after{
+  border: none;
+}
+.guanyin-title {
+  text-indent: 2em;
+  font-size: 28rpx;
+  margin: 20rpx;
+  line-height: 1.8;
+}
+
+.guanyin-title image {
+  width: 60%;
+  margin:20rpx auto;
+  display: block;
+}
+
+.guanyin-sign {
+  text-align: center;
+  margin: 50rpx 0 20rpx;
+}
+
+.guanyin-sign image {
+  width: 97rpx;
+  height: 189rpx;
+}
+
+.guanyin-zhibei {
+  text-align: center;
+  position: relative;
+}
+.guanyin-zhibei view{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.guanyin-zhibei image {
+  width: 188rpx;
+  height: 62rpx;
+}
+
+.guanyin-tip {
+  margin: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-indent: 2em;
+  line-height: 2;
+}
+
+.guanyin-three {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  background-size: 100% 100%;
+  color: green;
+}
+.guanyin-three .title{
+  margin: 40rpx;
+  font-size: 32rpx; 
+  text-align: center;
+}
+.guanyin-three .title span{
+  display: block;
+  margin-top: 10rpx;
+}
+.guanyin-three .shengbei {
+  text-align: center;
+}
+.guanyin-three .shengbei .sign {
+  width: 200rpx;
+}
+.guanyin-three .shengbei .zhibeiSign {
+  width: 188rpx;
+  display: block;
+  margin: 20rpx auto;
+}
+.guanyin-three .shengbei .desc {
+  font-size: 32rpx;
+  color: #000;
+  margin-bottom: 50rpx;
+}
+
+.guanyin-jie {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background:#fff url('http://www.moepan.net/uploads/2018031314084058743202.jpg');
+  background-size: 100% 100%;
+}
+
+.guanyin-jie .guanyin-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+.guanyin-jie .title {
+  margin-top: 40rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #834b27;
+  font-size: 32rpx;
+}
+
+
+.guanyin-jie .desc {
+  margin: 20rpx;
+  font-size: 28rpx;
+  color: #834b27;
+  line-height: 1.7
+}
+.guanyin-jie .title span,
+.guanyin-jie .desc span {
+  margin-right: 20rpx;
+}
+
+.guanyin-jie .desc i {
+  font-weight: bold;
+  display: block;
+}
+
+.guanyin-jie .hide-guanyin {
+  width: 188rpx;
+  height: 62rpx;
+  margin: 60rpx auto 50rpx;
+}
+.guanyin-jie .image {
+  margin:0 20rpx;
+}
+.guanyin-jie .image image {
+  width: 100%;
+}
+
+.guanyin-jie .hide-guanyin image {
+  width: 100%;
+}
+/* pages/lvzu/lvzu.wxss *//* pages/daxian/daxian.wxss */

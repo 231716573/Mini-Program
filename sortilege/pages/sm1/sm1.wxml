@@ -1,0 +1,408 @@
+<!--pages/sm1/sm1.wxml-->
+<import src="../template/template.wxml" />
+
+<view class="sm_bg"></view>
+<view class="sm">
+  <swiper class="scroll-sm" current="{{currentIndex}}" duration="500" circular="true" bindchange="bindChange">
+    <swiper-item class="sm1 sm-all">
+      <block wx:if="{{sm1Show}}">
+        <view class="h2">第一章 - 生辰篇</view>
+        <view class="chapter">
+          <view class="chapter-view chapter-bazi">
+            <text>八字：</text>
+            <text>{{bz.baziStr0(bazi.bz)}}</text>
+            <text>{{bz.baziStr1(bazi.bz)}}</text>
+            <text>{{bz.baziStr2(bazi.bz)}}</text>
+            <text>{{bz.baziStr3(bazi.bz)}}</text>
+          </view>
+          <view class="chapter-view chapter-bazi">
+            <text>五行：</text>
+            <text>{{bz.baziStr0(bazi.wx)}}</text>
+            <text>{{bz.baziStr1(bazi.wx)}}</text>
+            <text>{{bz.baziStr2(bazi.wx)}}</text>
+            <text>{{bz.baziStr3(bazi.wx)}}</text>
+          </view>
+          <view class="chapter-view chapter-bazi">
+            <text>纳音：</text>
+            <text>{{bz.baziStr0(bazi.ny)}}</text>
+            <text>{{bz.baziStr1(bazi.ny)}}</text>
+            <text>{{bz.baziStr2(bazi.ny)}}</text>
+            <text>{{bz.baziStr3(bazi.ny)}}</text>
+          </view>
+        </view>
+        <view class="qt">
+          <text style='line-height: 1.5;'>{{baziQt}}</text>
+        </view>
+        <view class="sxqx">
+          <span>生肖个性：</span>
+          <text style='line-height: 1.5;'>{{baziSxgx}}</text>
+        </view>
+        <view class="sxqx yrsml">
+          <span>月日时命理：</span>
+          <text style='line-height: 1.5;'>{{baziYrsml}}</text>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item class="sm2 sm-all">
+      <block wx:if="{{sm2Show}}">
+        <view class="h2">第二章 - 八字篇</view>
+        <view class="qt" wx:if="{{shengchen.qzdy}}">
+          <text style='line-height: 1.2;'>{{shengchenQzdy}}</text>
+        </view>
+        <view class="sxqx" wx:if="{{shengchen.xgfx}}">
+          <span>性格分析</span>
+          <i></i>
+          <text style='line-height: 1.5;'>{{shengchenXgfx}}</text>
+        </view>
+        <view class="sxqx yrsml" wx:if="{{shengchen.mzjp}}">
+          <span>命造简批</span>
+          <i></i>
+          <text style='line-height: 1.5;'>{{shengchenMzjp}}</text>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item class="sm3 sm-all">
+      <block wx:if="{{sm3Show}}">
+        <view class="h2">第三章 - 姓名篇</view>
+        <view class="chapter">
+          <view class="sm3-chapter-view sm3-chapter-xm">
+            <text></text>
+            <text>繁体</text>
+            <text>拼音</text>
+            <text>笔划</text>
+            <text>五行</text>
+          </view>
+          <view class="sm3-chapter-view">
+            <text>{{bz.baziStr0(xingming.xing)}}</text>
+            <text>{{bz.baziStr1(xingming.xing)}}</text>
+            <text>{{bz.baziStr2(xingming.xing)}}</text>
+            <text>{{bz.baziStr3(xingming.xing)}}</text>
+            <text>{{bz.baziStr4(xingming.xing)}}</text>
+          </view>
+          <view class="sm3-chapter-view">
+            <text>{{bz.baziStr0(xingming.ming)}}</text>
+            <text>{{bz.baziStr1(xingming.ming)}}</text>
+            <text>{{bz.baziStr2(xingming.ming)}}</text>
+            <text>{{bz.baziStr3(xingming.ming)}}</text>
+            <text>{{bz.baziStr4(xingming.ming)}}</text>
+          </view>
+          <view class="sm3-chapter-view" wx:if="{{xingming.ming2}}">
+            <text>{{bz.baziStr0(xingming.ming2)}}</text>
+            <text>{{bz.baziStr1(xingming.ming2)}}</text>
+            <text>{{bz.baziStr2(xingming.ming2)}}</text>
+            <text>{{bz.baziStr3(xingming.ming2)}}</text>
+            <text>{{bz.baziStr4(xingming.ming2)}}</text>
+          </view>
+          <view class="sm3-chapter-view" wx:if="{{xingming.ming3}}">
+            <text>{{bz.baziStr0(xingming.ming3)}}</text>
+            <text>{{bz.baziStr1(xingming.ming3)}}</text>
+            <text>{{bz.baziStr2(xingming.ming3)}}</text>
+            <text>{{bz.baziStr3(xingming.ming3)}}</text>
+            <text>{{bz.baziStr4(xingming.ming3)}}</text>
+          </view>
+        </view>
+        <view class="sm3-qt">
+          <text style='line-height: 1.7;'>{{xingmingQt}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingTgjx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingRgjx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDgjx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingZgjx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingWgjx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDscslyx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDjcyyx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDcgyyx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDrjgxyx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDxgyx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingRgslas}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingDgslas}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingZgslas}}</text>
+        </view>
+        <view class="sm3-tg">
+          <text style='line-height: 1.7;'>{{xingmingWgslas}}</text>
+        </view>
+        <view class="sm3-zp">
+          <view class="sm3-zp-flex1">{{xingmingZpjy}}</view>
+          <view class="sm3-zp-flex2">{{xingmingNum}}</view>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item class="sm4 sm-all">
+      <block wx:if="{{sm4Show}}">
+        <view class="h2">第四章 - 日干篇</view>
+        <view class="chapter">
+          <view class="chapter-view chapter-bazi">
+            <text>八字：</text>
+            <text>{{bz.baziStr0(rigan.bz)}}</text>
+            <text>{{bz.baziStr1(rigan.bz)}}</text>
+            <text>{{bz.baziStr2(rigan.bz)}}</text>
+            <text>{{bz.baziStr3(rigan.bz)}}</text>
+          </view>
+          <view class="chapter-view chapter-bazi">
+            <text>五行：</text>
+            <text>{{bz.baziStr0(rigan.wx)}}</text>
+            <text>{{bz.baziStr1(rigan.wx)}}</text>
+            <text>{{bz.baziStr2(rigan.wx)}}</text>
+            <text>{{bz.baziStr3(rigan.wx)}}</text>
+          </view>
+          <view class="chapter-view chapter-bazi">
+            <text>纳音：</text>
+            <text>{{bz.baziStr0(rigan.ny)}}</text>
+            <text>{{bz.baziStr1(rigan.ny)}}</text>
+            <text>{{bz.baziStr2(rigan.ny)}}</text>
+            <text>{{bz.baziStr3(rigan.ny)}}</text>
+          </view>
+        </view>
+        <view class="sm3-qt">
+          <text>{{riganQt}}</text>
+        </view>
+        <view class="sm3-tg">
+          <view class="sm3-qt-title">生肖个性</view>
+          <text style='line-height: 1.7;'>{{riganSxgx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <view class="sm3-qt-title">性格分析</view>
+          <text style='line-height: 1.7;'>{{riganXgfx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <view class="sm3-qt-title">爱情分析</view>
+          <text style='line-height: 1.7;'>{{riganAqfx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <view class="sm3-qt-title">事业分析</view>
+          <text style='line-height: 1.7;'>{{riganSyfx}}</text>
+        </view>
+        <view class="sm3-tg">
+          <view class="sm3-qt-title">财运分析</view>
+          <text style='line-height: 1.7;'>{{riganCyfx}}</text>
+        </view>
+        <view class="sm3-qt">说明:日干论命仅对八字中日柱的信息进行分析，为片面的信息，仅供参考！</view>
+      </block>
+    </swiper-item>
+    <swiper-item class="sm5 sm-all">
+      <block wx:if="{{sm5Show}}">
+        <view class="h2">第五章 - 日干篇</view>
+        <view class="ytg-title">袁天罡称骨算命</view>
+        <view class="ytg-detail">
+          <view class="ytg-detail-chengu">{{chengu.xm}}，根据您的生辰八字,经过测算，您的骨重为：
+            <span class="red">
+              <i>{{chengu.weight}}</i>
+            </span>
+          </view>
+          <view class="ytg-content">
+            <view class="title">命书</view>
+            <view>
+              <text style='line-height: 2;'>{{chenguMs}}</text>
+            </view>
+          </view>
+          <image src='/assets/yuantiangang.png' mode="widthFix" class="yuantiangang"></image>
+        </view>
+        <view class="chengu-msjs">命书解释：</view>
+        <view class="chengu-msjs-neirong">
+          <text>{{chenguMsjs}}</text>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item class="sm6 sm-all">
+      <block>
+        <view class="h2">第六章 - 姻缘篇</view>
+        <view class="yinyuan">
+          <!-- <view>配对测试：</view> -->
+          <view class="yy-first">
+            <view class="title">第一个人</view>
+            <view class="name">
+              姓名：
+              <input value="{{firstName}}" disabled="true" />
+              <picker bindchange="bindPickerNameFirst" class="picker picker-sex" value="{{nameFirst}}" range="{{name}}">{{name[nameFirst]}}</picker>
+            </view>
+            <view class="sex">
+              性别：
+              <input value="{{firstSex}}性" disabled="true" style='width: 100rpx; text-align:center;padding-left: 0;' />
+            </view>
+            <view class="shengchen">
+              <view class="date">阳历：
+                <picker class="picker-2" mode="date" disabled="true" bindchange="bindYear1Change">{{year1}}</picker>
+                <picker class="picker-2" mode="time" bindchange="bindTime1Change" style='width: 140rpx;'>{{time1}}</picker>
+              </view>
+            </view>
+          </view>
+          <view class="jianjiexian"></view>
+          <view class="yy-first">
+            <view class="title">第二个人</view>
+            <view class="name">
+              姓名：
+              <input bindblur="YYsecondName" />
+              <picker bindchange="bindPickerNameSecond" class="picker picker-sex" value="{{nameSecond}}" range="{{name}}">{{name[nameSecond]}}</picker>
+            </view>
+            <view class="sex">
+              性别：
+              <picker bindchange="bindPickerSecondChange" class="picker picker-sex" value="{{sexSecond}}" range="{{sex}}">{{sex[sexSecond]}}</picker>
+            </view>
+            <view class="shengchen">
+              <view class="date">阳历：
+                <picker class="picker-2" mode="date" bindchange="bindYear2Change">{{year2}}</picker>
+                <picker class="picker-2" mode="time" bindchange="bindTime2Change" style='width: 140rpx;'>{{time2}}</picker>
+              </view>
+            </view>
+          </view>
+          <button bindtap='startYY'>开始姻缘配对</button>
+        </view>
+      </block>
+    </swiper-item>
+  </swiper>
+  <!-- 底部tab栏目 -->
+  <view class="sm-wrapper">
+    <view class="sm-view">
+      <view wx:for="{{sm.arr}}" wx:key="{{*this}}" class="sm-nav {{index == currentIndex ? 'active' : ''}}" bindtap='swichNav' data-current="{{index}}">{{item}}</view>
+    </view>
+  </view>
+  <!-- sm6 点击开始配对 -->
+  <view class="sm7 sm-all" style='left:{{sm7Left}}px'>
+    <view class="title">配对姻缘
+      <span bindtap="hideSm7"></span>
+    </view>
+    <view class="name1">{{sm7Name1}}</view>
+    <view class="chapter">
+      <view class="sm3-chapter-view sm3-chapter-xm">
+        <text></text>
+        <text>繁体</text>
+        <text>拼音</text>
+        <text>笔划</text>
+        <text>五行</text>
+      </view>
+      <view class="sm3-chapter-view">
+        <text>{{bz.baziStr0(sm7.xing)}}</text>
+        <text>{{bz.baziStr1(sm7.xing)}}</text>
+        <text>{{bz.baziStr2(sm7.xing)}}</text>
+        <text>{{bz.baziStr3(sm7.xing)}}</text>
+        <text>{{bz.baziStr4(sm7.xing)}}</text>
+      </view>
+      <view class="sm3-chapter-view">
+        <text>{{bz.baziStr0(sm7.nming1)}}</text>
+        <text>{{bz.baziStr1(sm7.nming1)}}</text>
+        <text>{{bz.baziStr2(sm7.nming1)}}</text>
+        <text>{{bz.baziStr3(sm7.nming1)}}</text>
+        <text>{{bz.baziStr4(sm7.nming1)}}</text>
+      </view>
+      <view class="sm3-chapter-view" wx:if="{{sm7.nming2}}">
+        <text>{{bz.baziStr0(sm7.nming2)}}</text>
+        <text>{{bz.baziStr1(sm7.nming2)}}</text>
+        <text>{{bz.baziStr2(sm7.nming2)}}</text>
+        <text>{{bz.baziStr3(sm7.nming2)}}</text>
+        <text>{{bz.baziStr4(sm7.nming2)}}</text>
+      </view>
+    </view>
+    <view class="name1">{{sm7.ngxfx1}}</view>
+    <view class="sm7-line"></view>
+    <view class="name1">{{sm7Name2}}</view>
+    <view class="chapter">
+      <view class="sm3-chapter-view sm3-chapter-xm">
+        <text></text>
+        <text>繁体</text>
+        <text>拼音</text>
+        <text>笔划</text>
+        <text>五行</text>
+      </view>
+      <view class="sm3-chapter-view">
+        <text>{{bz.baziStr0(sm7.xing2)}}</text>
+        <text>{{bz.baziStr1(sm7.xing2)}}</text>
+        <text>{{bz.baziStr2(sm7.xing2)}}</text>
+        <text>{{bz.baziStr3(sm7.xing2)}}</text>
+        <text>{{bz.baziStr4(sm7.xing2)}}</text>
+      </view>
+      <view class="sm3-chapter-view">
+        <text>{{bz.baziStr0(sm7.n2ming1)}}</text>
+        <text>{{bz.baziStr1(sm7.n2ming1)}}</text>
+        <text>{{bz.baziStr2(sm7.n2ming1)}}</text>
+        <text>{{bz.baziStr3(sm7.n2ming1)}}</text>
+        <text>{{bz.baziStr4(sm7.n2ming1)}}</text>
+      </view>
+      <view class="sm3-chapter-view" wx:if="{{sm7.n2ming2}}">
+        <text>{{bz.baziStr0(sm7.n2ming2)}}</text>
+        <text>{{bz.baziStr1(sm7.n2ming2)}}</text>
+        <text>{{bz.baziStr2(sm7.n2ming2)}}</text>
+        <text>{{bz.baziStr3(sm7.n2ming2)}}</text>
+        <text>{{bz.baziStr4(sm7.n2ming2)}}</text>
+      </view>
+      <view class="sm3-chapter-view" wx:if="{{sm7.n2ming3}}">
+        <text>{{bz.baziStr0(sm7.n2ming3)}}</text>
+        <text>{{bz.baziStr1(sm7.n2ming3)}}</text>
+        <text>{{bz.baziStr2(sm7.n2ming3)}}</text>
+        <text>{{bz.baziStr3(sm7.n2ming3)}}</text>
+        <text>{{bz.baziStr4(sm7.n2ming3)}}</text>
+      </view>
+    </view>
+    <view class="name1">{{sm7.ngxfx2}}</view>
+    <view class="sm7-line"></view>
+    <view class="name1" style='color:red;'>{{sm7Xmyfzs}}</view>
+  </view>
+</view>
+
+<wxs module="bz">
+  var baziStr0 = function(str) {
+    if (typeof str != 'string') {
+      return
+    }
+    var str0 = str.split(',')
+    return str0[0]
+  }
+  var baziStr1 = function(str) {
+    if (typeof str != 'string') {
+      return
+    }
+    var str0 = str.split(',')
+    return str0[1]
+  }
+  var baziStr2 = function(str) {
+    if (typeof str != 'string') {
+      return
+    }
+    var str0 = str.split(',')
+    return str0[2]
+  }
+  var baziStr3 = function(str) {
+    if (typeof str != 'string') {
+      return
+    }
+    var str0 = str.split(',')
+    return str0[3]
+  }
+  var baziStr4 = function(str) {
+    if (typeof str != 'string') {
+      return
+    }
+    var str0 = str.split(',')
+    return str0[4]
+  }
+
+  module.exports.baziStr0 = baziStr0
+  module.exports.baziStr1 = baziStr1
+  module.exports.baziStr2 = baziStr2
+  module.exports.baziStr3 = baziStr3
+  module.exports.baziStr4 = baziStr4
+</wxs>
